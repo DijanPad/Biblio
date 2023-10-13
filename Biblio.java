@@ -46,10 +46,11 @@ public class Biblio {
         System.out.println(menu);
         System.out.println("Ingresa una opcion: ");
         inputOption = scanner.nextLine();
-        ask = true;
+        
         
         if (inputOption.equals("1")){
-            while (ask = true){
+            ask = true;
+            while (ask == true){
             System.out.println("Que tipo de documento deseas agregar?\n"+
             "1. Libro\n"+
             "2. Revista\n"+
@@ -66,6 +67,7 @@ public class Biblio {
                     int id = scanner.nextInt();
                     System.out.println("Ingrese la materia: "); 
                     String materia = scanner.nextLine();
+                    materia = scanner.nextLine();
                     System.out.println("Ingrese la cantidad: "); 
                     int cantidad = scanner.nextInt();
                     System.out.println("Ingrese la editorial: "); 
@@ -105,8 +107,8 @@ public class Biblio {
 
                     documentos.add(new Articulo(true, titulo, autor, nIdentif, materia, cantidad));
                 } else if(inputOption.equals("4")){
-                    ask = false;
-                } else if(inputOption.equals("5")){
+                    ask = !ask;
+                } else{
                     System.out.println("Ingresa una opcion valida\n");
         }}
 
@@ -116,10 +118,10 @@ public class Biblio {
             int id = scanner.nextInt();
 
 
-            System.out.println("Todos los documentos");
+            System.out.println("Todos los documentos disponibles: ");
             int j;
             for(int i = 0; i < documentos.size(); i++) {
-                j = i-1;
+                j = i+1;
                 if(documentos.get(i).getDisponible() == true){
                     System.out.println(j + ". " + documentos.get(i).toString());
                 }
@@ -132,6 +134,7 @@ public class Biblio {
             
             System.out.println("Ingrese la fecha del dia de hoy: ");
                     String fsol = scanner.nextLine();
+                    fsol = scanner.nextLine();
             System.out.println("Ingrese la fecha en la que lo devolvera: ");
                     String fdev = scanner.nextLine();
 
@@ -150,10 +153,10 @@ public class Biblio {
             int id = scanner.nextInt();
 
 
-            System.out.println("Todos los documentos");
+            System.out.println("Todos los documentos prestados: ");
             int j;
             for(int i = 0; i < documentos.size(); i++) {
-                j = i-1;
+                j = i+1;
                 if(documentos.get(i).getDisponible() == false){
                     System.out.println(j + ". " + documentos.get(i).toString());
                 }
