@@ -16,6 +16,9 @@ public class Libro extends Texto{
         this.editorial = editorial;
     }
 
+    public String toString(){
+        return super.toString() + ", editorial " + editorial;
+    }
     
 
 }

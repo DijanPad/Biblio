@@ -59,8 +59,7 @@ protected void setCantidad(int cantidad) {
 
 @Override
 public String toString() {
-    return "disponible " + disponible + ", titulo " + titulo + ", autor " + autor + ", nIdentif " + nIdentif
-            + ", materia " + materia + ", cantidad " + cantidad;
+    return  "Titulo: " + titulo + ", autor: " + autor + ", materia: " + materia + ", cantidad: " + cantidad;
 }
 
 

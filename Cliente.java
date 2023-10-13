@@ -34,8 +34,21 @@ public void setDirección(String dirección) {
 public Prestamo[] getPrestamos() {
     return prestamos;
 }
-public void setPrestamos(Prestamo[] prestamos) {
-    this.prestamos = prestamos;
+public void setPrestamos(String titulo, String fSolicitud, String fDevolucion) {
+    for (int i = 0; i < prestamos.length; i++) {
+        if (prestamos[i] == null) {
+            prestamos[i] = new Prestamo(titulo, fSolicitud, fDevolucion);
+            break;
+    }
 }
-    
+}
+public void resetPrestamos(String id) {
+    for (int i = 0; i < prestamos.length; i++){
+        if (prestamos[i].getTitulo() == id){
+            prestamos[i] = null;
+            break;
+        }
+    }
+}
+
 }

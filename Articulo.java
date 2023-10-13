@@ -4,4 +4,8 @@ public class Articulo extends Texto{
         super(disponible, titulo, autor, nIdentif, materia, cantidad);
     }
     
+    public String toString(){
+        return super.toString();
+    }
+
 }

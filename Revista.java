@@ -24,4 +24,12 @@ public class Revista extends Texto{
     }
 
 
+    @Override
+    public String toString() {
+        return super.toString() + ", anio: " + anio + ", numero: " + numero;
+    }
+
+    
+
+
 }
